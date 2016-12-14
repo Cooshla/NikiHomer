@@ -1,0 +1,75 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.HoldingPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+} 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>@CurrentPage.Title</title>
+<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script> 
+
+<link href="~/css/Holding/tools/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> 
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+
+
+</head>
+<body>
+<div class="wrapper" >
+
+	<div >
+		<div class="header" style="background-image: url('@Umbraco.Media(CurrentPage.BackgroundImage).Url'); background-repeat:no-repeat;">
+
+			<div class="xouter">
+				<div class="xinner">
+					<h1 id="logo">
+					<img src="@Umbraco.Media(CurrentPage.Logo).Url" alt="@CurrentPage.Title" width="200"/></h1>
+				</div>
+			</div>
+			
+			<div class="content-wrap">
+				<div class="comingsoon">
+					<h2>Coming Soon</h2>
+					
+				</div>
+	
+				<div class="content">
+					<p>@CurrentPage.Description</p>
+				</div>
+			</div>
+				
+		</div> <!-- end header -->
+		</div>
+				
+		<div class="social">
+			@if(!string.IsNullOrWhiteSpace(@CurrentPage.Facebook))
+			{
+			<a href="@CurrentPage.Facebook" class="fa-stack fa-lg">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+			</a>
+			}
+
+			@if(!string.IsNullOrWhiteSpace(@CurrentPage.Twitter))
+			{
+			
+			<a href="@CurrentPage.Twitter" class="fa-stack fa-lg">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+			</a>
+		    }
+					 
+			@if(!string.IsNullOrWhiteSpace(@CurrentPage.LinkedIn))
+			{
+			
+			<a href="@CurrentPage.LinkedIn" class="fa-stack fa-lg">
+				 <i class="fa fa-circle fa-stack-2x"></i>
+				 <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+			</a>
+			}
+		</div>
+</div>
+
+</body>
