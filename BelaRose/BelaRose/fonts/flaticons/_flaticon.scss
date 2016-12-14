@@ -1,0 +1,123 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 03/05/2016 15:18
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-barber:before { content: "\f100"; }
+.flaticon-beautiful-lotus-flower:before { content: "\f101"; }
+.flaticon-beauty:before { content: "\f102"; }
+.flaticon-beauty-1:before { content: "\f103"; }
+.flaticon-beauty-2:before { content: "\f104"; }
+.flaticon-circle:before { content: "\f105"; }
+.flaticon-circle-1:before { content: "\f106"; }
+.flaticon-claw-bath-in-spa:before { content: "\f107"; }
+.flaticon-cosmetics:before { content: "\f108"; }
+.flaticon-cream:before { content: "\f109"; }
+.flaticon-cut:before { content: "\f10a"; }
+.flaticon-fashion:before { content: "\f10b"; }
+.flaticon-female-eye:before { content: "\f10c"; }
+.flaticon-female-hair-shape-and-face-silhouette:before { content: "\f10d"; }
+.flaticon-flowers-on-human-feet:before { content: "\f10e"; }
+.flaticon-hair-cut:before { content: "\f10f"; }
+.flaticon-hair-dye-kit:before { content: "\f110"; }
+.flaticon-hairdresser-chair:before { content: "\f111"; }
+.flaticon-hairdryer:before { content: "\f112"; }
+.flaticon-hairstylist-with-scissors-and-spray-bottle-in-hands:before { content: "\f113"; }
+.flaticon-lacquer-for-nails:before { content: "\f114"; }
+.flaticon-lipstick-1:before { content: "\f115"; }
+.flaticon-lipstick-with-cover:before { content: "\f116"; }
+.flaticon-makeup-brushes:before { content: "\f117"; }
+.flaticon-male-hair-of-head-and-face-shapes:before { content: "\f118"; }
+.flaticon-people:before { content: "\f119"; }
+.flaticon-scissor-and-comb:before { content: "\f11a"; }
+.flaticon-scissors:before { content: "\f11b"; }
+.flaticon-scissors-1:before { content: "\f11c"; }
+.flaticon-scissors-2:before { content: "\f11d"; }
+.flaticon-scissors-3:before { content: "\f11e"; }
+.flaticon-scissors-and-comb:before { content: "\f11f"; }
+.flaticon-scissors-and-comb-1:before { content: "\f120"; }
+.flaticon-shampoo-application-in-hair-salon:before { content: "\f121"; }
+.flaticon-shape:before { content: "\f122"; }
+.flaticon-shape-1:before { content: "\f123"; }
+.flaticon-shape-2:before { content: "\f124"; }
+.flaticon-tool:before { content: "\f125"; }
+.flaticon-walkway-and-a-plant:before { content: "\f126"; }
+.flaticon-woman-lips:before { content: "\f127"; }
+.flaticon-woman-with-long-hair:before { content: "\f128"; }
+.flaticon-women-health-symbol:before { content: "\f129"; }
+    
+    $font-Flaticon-barber: "\f100";
+    $font-Flaticon-beautiful-lotus-flower: "\f101";
+    $font-Flaticon-beauty: "\f102";
+    $font-Flaticon-beauty-1: "\f103";
+    $font-Flaticon-beauty-2: "\f104";
+    $font-Flaticon-circle: "\f105";
+    $font-Flaticon-circle-1: "\f106";
+    $font-Flaticon-claw-bath-in-spa: "\f107";
+    $font-Flaticon-cosmetics: "\f108";
+    $font-Flaticon-cream: "\f109";
+    $font-Flaticon-cut: "\f10a";
+    $font-Flaticon-fashion: "\f10b";
+    $font-Flaticon-female-eye: "\f10c";
+    $font-Flaticon-female-hair-shape-and-face-silhouette: "\f10d";
+    $font-Flaticon-flowers-on-human-feet: "\f10e";
+    $font-Flaticon-hair-cut: "\f10f";
+    $font-Flaticon-hair-dye-kit: "\f110";
+    $font-Flaticon-hairdresser-chair: "\f111";
+    $font-Flaticon-hairdryer: "\f112";
+    $font-Flaticon-hairstylist-with-scissors-and-spray-bottle-in-hands: "\f113";
+    $font-Flaticon-lacquer-for-nails: "\f114";
+    $font-Flaticon-lipstick-1: "\f115";
+    $font-Flaticon-lipstick-with-cover: "\f116";
+    $font-Flaticon-makeup-brushes: "\f117";
+    $font-Flaticon-male-hair-of-head-and-face-shapes: "\f118";
+    $font-Flaticon-people: "\f119";
+    $font-Flaticon-scissor-and-comb: "\f11a";
+    $font-Flaticon-scissors: "\f11b";
+    $font-Flaticon-scissors-1: "\f11c";
+    $font-Flaticon-scissors-2: "\f11d";
+    $font-Flaticon-scissors-3: "\f11e";
+    $font-Flaticon-scissors-and-comb: "\f11f";
+    $font-Flaticon-scissors-and-comb-1: "\f120";
+    $font-Flaticon-shampoo-application-in-hair-salon: "\f121";
+    $font-Flaticon-shape: "\f122";
+    $font-Flaticon-shape-1: "\f123";
+    $font-Flaticon-shape-2: "\f124";
+    $font-Flaticon-tool: "\f125";
+    $font-Flaticon-walkway-and-a-plant: "\f126";
+    $font-Flaticon-woman-lips: "\f127";
+    $font-Flaticon-woman-with-long-hair: "\f128";
+    $font-Flaticon-women-health-symbol: "\f129";

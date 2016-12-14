@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1446b9584c15006")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a62654c4da706921")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -483,6 +483,516 @@ namespace Umbraco.Web.PublishedContentModels
 		public string Twitter
 		{
 			get { return this.GetPropertyValue<string>("twitter"); }
+		}
+	}
+
+	/// <summary>Bela Rose Master</summary>
+	[PublishedContentModel("belaRoseMaster")]
+	public partial class BelaRoseMaster : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "belaRoseMaster";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public BelaRoseMaster(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BelaRoseMaster, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Canonical
+		///</summary>
+		[ImplementPropertyType("canonical")]
+		public string Canonical
+		{
+			get { return this.GetPropertyValue<string>("canonical"); }
+		}
+
+		///<summary>
+		/// Description
+		///</summary>
+		[ImplementPropertyType("description")]
+		public string Description
+		{
+			get { return this.GetPropertyValue<string>("description"); }
+		}
+
+		///<summary>
+		/// Email
+		///</summary>
+		[ImplementPropertyType("email")]
+		public string Email
+		{
+			get { return this.GetPropertyValue<string>("email"); }
+		}
+
+		///<summary>
+		/// Facebook Link
+		///</summary>
+		[ImplementPropertyType("facebookLink")]
+		public string FacebookLink
+		{
+			get { return this.GetPropertyValue<string>("facebookLink"); }
+		}
+
+		///<summary>
+		/// Instagram Link
+		///</summary>
+		[ImplementPropertyType("instagramLink")]
+		public string InstagramLink
+		{
+			get { return this.GetPropertyValue<string>("instagramLink"); }
+		}
+
+		///<summary>
+		/// Is Blog InActive: Tick if you want to disable the blog link
+		///</summary>
+		[ImplementPropertyType("isBlogInActive")]
+		public bool IsBlogInActive
+		{
+			get { return this.GetPropertyValue<bool>("isBlogInActive"); }
+		}
+
+		///<summary>
+		/// Loader Logo: Used as the page loader logo
+		///</summary>
+		[ImplementPropertyType("loaderLogo")]
+		public string LoaderLogo
+		{
+			get { return this.GetPropertyValue<string>("loaderLogo"); }
+		}
+
+		///<summary>
+		/// Location
+		///</summary>
+		[ImplementPropertyType("location")]
+		public string Location
+		{
+			get { return this.GetPropertyValue<string>("location"); }
+		}
+
+		///<summary>
+		/// Logo: The Main Logo
+		///</summary>
+		[ImplementPropertyType("logo")]
+		public string Logo
+		{
+			get { return this.GetPropertyValue<string>("logo"); }
+		}
+
+		///<summary>
+		/// Logo Dark: Dark version of the logo
+		///</summary>
+		[ImplementPropertyType("logoDark")]
+		public string LogoDark
+		{
+			get { return this.GetPropertyValue<string>("logoDark"); }
+		}
+
+		///<summary>
+		/// OpeningHours
+		///</summary>
+		[ImplementPropertyType("openingHours")]
+		public IHtmlString OpeningHours
+		{
+			get { return this.GetPropertyValue<IHtmlString>("openingHours"); }
+		}
+
+		///<summary>
+		/// Robots: Disallow Robots
+		///</summary>
+		[ImplementPropertyType("robots")]
+		public bool Robots
+		{
+			get { return this.GetPropertyValue<bool>("robots"); }
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return this.GetPropertyValue<string>("title"); }
+		}
+
+		///<summary>
+		/// Tumblr Link
+		///</summary>
+		[ImplementPropertyType("tumblrLink")]
+		public string TumblrLink
+		{
+			get { return this.GetPropertyValue<string>("tumblrLink"); }
+		}
+
+		///<summary>
+		/// Twitter Link
+		///</summary>
+		[ImplementPropertyType("twitterLink")]
+		public string TwitterLink
+		{
+			get { return this.GetPropertyValue<string>("twitterLink"); }
+		}
+	}
+
+	/// <summary>Home</summary>
+	[PublishedContentModel("home")]
+	public partial class Home : BelaRoseMaster
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "home";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Home(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// About Carousel 1
+		///</summary>
+		[ImplementPropertyType("aboutCarousel1")]
+		public string AboutCarousel1
+		{
+			get { return this.GetPropertyValue<string>("aboutCarousel1"); }
+		}
+
+		///<summary>
+		/// About Content
+		///</summary>
+		[ImplementPropertyType("aboutContent")]
+		public string AboutContent
+		{
+			get { return this.GetPropertyValue<string>("aboutContent"); }
+		}
+
+		///<summary>
+		/// About Panels
+		///</summary>
+		[ImplementPropertyType("aboutPanels")]
+		public string AboutPanels
+		{
+			get { return this.GetPropertyValue<string>("aboutPanels"); }
+		}
+
+		///<summary>
+		/// About Sub Title
+		///</summary>
+		[ImplementPropertyType("aboutSubTitle")]
+		public string AboutSubTitle
+		{
+			get { return this.GetPropertyValue<string>("aboutSubTitle"); }
+		}
+
+		///<summary>
+		/// About Title
+		///</summary>
+		[ImplementPropertyType("aboutTitle")]
+		public string AboutTitle
+		{
+			get { return this.GetPropertyValue<string>("aboutTitle"); }
+		}
+
+		///<summary>
+		/// Background Image: Image for top banner backgound
+		///</summary>
+		[ImplementPropertyType("backgroundImage")]
+		public string BackgroundImage
+		{
+			get { return this.GetPropertyValue<string>("backgroundImage"); }
+		}
+
+		///<summary>
+		/// CTA Button Text
+		///</summary>
+		[ImplementPropertyType("cTAButtonText")]
+		public string CTabuttonText
+		{
+			get { return this.GetPropertyValue<string>("cTAButtonText"); }
+		}
+
+		///<summary>
+		/// CTA Text
+		///</summary>
+		[ImplementPropertyType("cTAText")]
+		public string CTatext
+		{
+			get { return this.GetPropertyValue<string>("cTAText"); }
+		}
+
+		///<summary>
+		/// CTA Title
+		///</summary>
+		[ImplementPropertyType("cTATitle")]
+		public string CTatitle
+		{
+			get { return this.GetPropertyValue<string>("cTATitle"); }
+		}
+
+		///<summary>
+		/// Gallery Title
+		///</summary>
+		[ImplementPropertyType("galleryTitle")]
+		public string GalleryTitle
+		{
+			get { return this.GetPropertyValue<string>("galleryTitle"); }
+		}
+
+		///<summary>
+		/// H1 Tag
+		///</summary>
+		[ImplementPropertyType("h1Tag")]
+		public string H1Tag
+		{
+			get { return this.GetPropertyValue<string>("h1Tag"); }
+		}
+
+		///<summary>
+		/// Images
+		///</summary>
+		[ImplementPropertyType("images")]
+		public string Images
+		{
+			get { return this.GetPropertyValue<string>("images"); }
+		}
+
+		///<summary>
+		/// Is About Enabled
+		///</summary>
+		[ImplementPropertyType("isAboutEnabled")]
+		public bool IsAboutEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isAboutEnabled"); }
+		}
+
+		///<summary>
+		/// Is Contact Enabled
+		///</summary>
+		[ImplementPropertyType("isContactEnabled")]
+		public bool IsContactEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isContactEnabled"); }
+		}
+
+		///<summary>
+		/// Is CTA Enabled: Toggle CTA Section
+		///</summary>
+		[ImplementPropertyType("isCTAEnabled")]
+		public bool IsCtaenabled
+		{
+			get { return this.GetPropertyValue<bool>("isCTAEnabled"); }
+		}
+
+		///<summary>
+		/// Is Gallery Enabled
+		///</summary>
+		[ImplementPropertyType("isGalleryEnabled")]
+		public bool IsGalleryEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isGalleryEnabled"); }
+		}
+
+		///<summary>
+		/// Is Info Enabled
+		///</summary>
+		[ImplementPropertyType("isInfoEnabled")]
+		public bool IsInfoEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isInfoEnabled"); }
+		}
+
+		///<summary>
+		/// Is Prices Enabled
+		///</summary>
+		[ImplementPropertyType("isPricesEnabled")]
+		public bool IsPricesEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isPricesEnabled"); }
+		}
+
+		///<summary>
+		/// Is Services Enabled
+		///</summary>
+		[ImplementPropertyType("isServicesEnabled")]
+		public bool IsServicesEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isServicesEnabled"); }
+		}
+
+		///<summary>
+		/// Is Team Enabled
+		///</summary>
+		[ImplementPropertyType("isTeamEnabled")]
+		public bool IsTeamEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isTeamEnabled"); }
+		}
+
+		///<summary>
+		/// Is Video Enabled
+		///</summary>
+		[ImplementPropertyType("isVideoEnabled")]
+		public bool IsVideoEnabled
+		{
+			get { return this.GetPropertyValue<bool>("isVideoEnabled"); }
+		}
+
+		///<summary>
+		/// List Title
+		///</summary>
+		[ImplementPropertyType("listTitle")]
+		public string ListTitle
+		{
+			get { return this.GetPropertyValue<string>("listTitle"); }
+		}
+
+		///<summary>
+		/// Price List
+		///</summary>
+		[ImplementPropertyType("priceList")]
+		public string PriceList
+		{
+			get { return this.GetPropertyValue<string>("priceList"); }
+		}
+
+		///<summary>
+		/// PriceList2
+		///</summary>
+		[ImplementPropertyType("priceList2")]
+		public string PriceList2
+		{
+			get { return this.GetPropertyValue<string>("priceList2"); }
+		}
+
+		///<summary>
+		/// Prices Title
+		///</summary>
+		[ImplementPropertyType("pricesTitle")]
+		public string PricesTitle
+		{
+			get { return this.GetPropertyValue<string>("pricesTitle"); }
+		}
+
+		///<summary>
+		/// ServicePanels
+		///</summary>
+		[ImplementPropertyType("servicePanels")]
+		public string ServicePanels
+		{
+			get { return this.GetPropertyValue<string>("servicePanels"); }
+		}
+
+		///<summary>
+		/// Services Content
+		///</summary>
+		[ImplementPropertyType("servicesContent")]
+		public string ServicesContent
+		{
+			get { return this.GetPropertyValue<string>("servicesContent"); }
+		}
+
+		///<summary>
+		/// Services Sub Title
+		///</summary>
+		[ImplementPropertyType("servicesSubTitle")]
+		public string ServicesSubTitle
+		{
+			get { return this.GetPropertyValue<string>("servicesSubTitle"); }
+		}
+
+		///<summary>
+		/// Services Title
+		///</summary>
+		[ImplementPropertyType("servicesTitle")]
+		public string ServicesTitle
+		{
+			get { return this.GetPropertyValue<string>("servicesTitle"); }
+		}
+	}
+
+	/// <summary>Content Block</summary>
+	[PublishedContentModel("contentBlock")]
+	public partial class ContentBlock : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "contentBlock";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public ContentBlock(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContentBlock, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Content
+		///</summary>
+		[ImplementPropertyType("content")]
+		public string Content
+		{
+			get { return this.GetPropertyValue<string>("content"); }
+		}
+
+		///<summary>
+		/// Is First: is first in the collection
+		///</summary>
+		[ImplementPropertyType("isFirst")]
+		public bool IsFirst
+		{
+			get { return this.GetPropertyValue<bool>("isFirst"); }
+		}
+
+		///<summary>
+		/// Sub Heading
+		///</summary>
+		[ImplementPropertyType("subHeading")]
+		public string SubHeading
+		{
+			get { return this.GetPropertyValue<string>("subHeading"); }
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public string Title
+		{
+			get { return this.GetPropertyValue<string>("title"); }
 		}
 	}
 
