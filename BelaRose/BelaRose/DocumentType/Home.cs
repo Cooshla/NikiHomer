@@ -20,6 +20,9 @@ namespace BelaRose.DocumentType
         [DocumentTypeProperty(UmbracoPropertyType.Textstring, Name = "MetaKeywords", Description = "MetaKeywords.", Tab = TabNames.Page)]
         public string MetaKeywords { get; set; }
 
+        [DocumentTypeProperty(UmbracoPropertyType.Textstring, Name = "MetaKeywords", Description = "MetaKeywords.", Tab = TabNames.Page)]
+        public string Author { get; set; }
+
 
         [DocumentTypeProperty(UmbracoPropertyType.Textstring, Name = "GooglePlus", Description = "GooglePlus.", Tab = TabNames.Page)]
         public string GooglePlus { get; set; }
@@ -38,6 +41,16 @@ namespace BelaRose.DocumentType
 
 
 
+
+        [DocumentTypeProperty(UmbracoPropertyType.MediaPicker, Name = "LogoDark", Description = "LogoDark.", Tab = TabNames.Content)]
+        public int? LogoDark { get; set; }
+
+
+        [DocumentTypeProperty(UmbracoPropertyType.MediaPicker, Name = "LoaderLogo", Description = "LoaderLogo.", Tab = TabNames.Content)]
+        public int? LoaderLogo { get; set; }
+
+        [DocumentTypeProperty(UmbracoPropertyType.MediaPicker, Name = "Logo", Description = "Logo.", Tab = TabNames.Content)]
+        public int? Logo { get; set; }
 
         [DocumentTypeProperty(UmbracoPropertyType.MediaPicker, Name = "BackgroundImage", Description = "BackgroundImage.", Tab = TabNames.Content)]
         public int? BackgroundImage { get; set; }
@@ -120,7 +133,9 @@ namespace BelaRose.DocumentType
         public string InfoPhone { get; set; }
         [DocumentTypeProperty(UmbracoPropertyType.Textstring, Name = "Address", Description = "Address.", Tab = TabNames.Info)]
         public string InfoAddress { get; set; }
-        
 
+
+        [DocumentTypeProperty(UmbracoPropertyType.RichtextEditor, Name = "OpeningHours", Description = "OpeningHours.", Tab = TabNames.Page)]
+        public string OpeningHours { get; set; }
     }
 }

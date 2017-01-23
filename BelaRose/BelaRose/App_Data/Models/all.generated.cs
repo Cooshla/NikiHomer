@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5c02d01d285c3cd0")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9dcc7a8a20fabe46")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -108,6 +108,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string AboutTitle
 		{
 			get { return this.GetPropertyValue<string>("aboutTitle"); }
+		}
+
+		///<summary>
+		/// MetaKeywords: MetaKeywords.
+		///</summary>
+		[ImplementPropertyType("author")]
+		public string Author
+		{
+			get { return this.GetPropertyValue<string>("author"); }
 		}
 
 		///<summary>
@@ -255,6 +264,33 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// LoaderLogo: LoaderLogo.
+		///</summary>
+		[ImplementPropertyType("loaderLogo")]
+		public string LoaderLogo
+		{
+			get { return this.GetPropertyValue<string>("loaderLogo"); }
+		}
+
+		///<summary>
+		/// Logo: Logo.
+		///</summary>
+		[ImplementPropertyType("logo")]
+		public string Logo
+		{
+			get { return this.GetPropertyValue<string>("logo"); }
+		}
+
+		///<summary>
+		/// LogoDark: LogoDark.
+		///</summary>
+		[ImplementPropertyType("logoDark")]
+		public string LogoDark
+		{
+			get { return this.GetPropertyValue<string>("logoDark"); }
+		}
+
+		///<summary>
 		/// MetaDescription: MetaDescription.
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
@@ -279,6 +315,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string MetaTitle
 		{
 			get { return this.GetPropertyValue<string>("metaTitle"); }
+		}
+
+		///<summary>
+		/// OpeningHours: OpeningHours.
+		///</summary>
+		[ImplementPropertyType("openingHours")]
+		public IHtmlString OpeningHours
+		{
+			get { return this.GetPropertyValue<IHtmlString>("openingHours"); }
 		}
 
 		///<summary>
