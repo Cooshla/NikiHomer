@@ -61,19 +61,21 @@
         <ul class="container-fluid accordion-group" id="accordion">
 
             @{
-                var ServiceList = Model.ServicePanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                var ServiceCollection = Umbraco.Content(ServiceList);
-
-                foreach (var item in ServiceCollection)
+                if (Model.ServicePanels != null)
                 {
-                            <!-- Panel 1 -->
-                <!-- Accordion item1-->
-                    if (item.IsFirst)
+                    var ServiceList = Model.ServicePanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    var ServiceCollection = Umbraco.Content(ServiceList);
+
+                    foreach (var item in ServiceCollection)
                     {
+                            <!-- Panel 1 -->
+                            <!-- Accordion item1-->
+                        if (item.IsFirst)
+                        {
                         @:<li class="out">
                     }
-                    else
-                    {
+                        else
+                        {
                         @:<li>
                         }
 
@@ -86,6 +88,7 @@
                             </article>
                         </div>
                         @:</li>
+                    }
                 }
 
             }
@@ -129,28 +132,33 @@
                     <!-- Image Carousel -->
                     <div id="owl-about" class="owl-carousel">
                         @{
-                            var BlogList = Model.AboutCarousel1.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                            var BlogCollection = Umbraco.Content(BlogList);
-
-                            foreach (var item in BlogCollection)
+                            if (Model.AboutCarousel1 != null)
                             {
+                                var BlogList = Model.AboutCarousel1.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                var BlogCollection = Umbraco.Content(BlogList);
+
+                                foreach (var item in BlogCollection)
+                                {
                                 <img src="@Umbraco.Media(item).Url" alt="">
+                                    }
+                                }
                             }
-                        }
                     </div>
                 </div>
                 <!-- /col-md-7 -->
                 <div class="col-md-5">
                     <!-- ACCORDION ROW -->
                     <div class="panel-group" id="accordion2">
-                        @{
-                            var PanelList = Model.AboutPanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                            var PanelCollection = Umbraco.Content(PanelList);
-
-                            foreach (var item in PanelCollection)
+                        @{  
+                            if (Model.AboutPanels != null)
                             {
-                                string idstring = "collapse" + item.Id;
-                                string classString = item.IsFirst ? "panel-collapse collapse in" : "panel-collapse collapse";
+                                var PanelList = Model.AboutPanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                var PanelCollection = Umbraco.Content(PanelList);
+
+                                foreach (var item in PanelCollection)
+                                {
+                                    string idstring = "collapse" + item.Id;
+                                    string classString = item.IsFirst ? "panel-collapse collapse in" : "panel-collapse collapse";
                             <!-- Panel 1 -->
                                 <div class="panel">
                                     <div class="panel-heading">
@@ -165,9 +173,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            }
+                                    }
+                                }
 
-                        }
+                            }
                     </div>
                     <!-- /panel-group -->
                 </div>
@@ -210,11 +219,13 @@
 
 
                                         @{
-                                            var PriceList = Model.PriceList.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                                            var PriceCollection = Umbraco.Content(PriceList);
-
-                                            foreach (var item in PriceCollection)
+                                            if (Model.PriceList != null)
                                             {
+                                                var PriceList = Model.PriceList.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                                var PriceCollection = Umbraco.Content(PriceList);
+
+                                                foreach (var item in PriceCollection)
+                                                {
 
                                     <!-- Item starts -->
                                                 <div class="menu-item">
@@ -231,8 +242,9 @@
                                     <!-- Item ends -->
 
 
+                                                    }
+                                                }
                                             }
-                                        }
 
                                     </div>
                                     <!--/ menu section -->
@@ -245,11 +257,13 @@
                                 <div class="menu-body">
                                     <div class="menu-section">
                                         @{
-                                            var PriceList2 = Model.PriceList2.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                                            var PriceCollection2 = Umbraco.Content(PriceList2);
-
-                                            foreach (var item in PriceCollection2)
+                                            if (Model.PriceList2 != null)
                                             {
+                                                var PriceList2 = Model.PriceList2.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                                var PriceCollection2 = Umbraco.Content(PriceList2);
+
+                                                foreach (var item in PriceCollection2)
+                                                {
 
                                     <!-- Item starts -->
                                                 <div class="menu-item">
@@ -266,8 +280,9 @@
                                     <!-- Item ends -->
 
 
+                                                    }
+                                                }
                                             }
-                                        }
                                     </div>
                                     <!--/ menu section -->
                                 </div>
@@ -303,11 +318,13 @@
                     <div id="lightbox">
 
                         @{
-                            var ImageList = Model.Images.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                            var ImageCollection = Umbraco.Content(ImageList);
-
-                            foreach (var item in ImageCollection)
+                            if (Model.Images != null)
                             {
+                                var ImageList = Model.Images.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                var ImageCollection = Umbraco.Content(ImageList);
+
+                                foreach (var item in ImageCollection)
+                                {
                                 <div class="bodywellbeing col-lg-4 col-sm-6 col-md-6">
                                     <div class="isotope-item">
                                         <div class="gallery-thumb">
@@ -318,8 +335,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                    }
+                                }
                             }
-                        }
                     </div>
                     <!-- /lightbox-->
                 </div>

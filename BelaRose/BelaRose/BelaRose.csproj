@@ -3165,11 +3165,6 @@
     <Content Include="Views\Partials\umbNewsOverviewWidget.cshtml" />
     <Content Include="Views\Partials\umbSocial.cshtml" />
     <Content Include="Views\Partials\umbTopNavigation.cshtml" />
-    <Content Include="Views\umbHomePage.cshtml" />
-    <Content Include="Views\umbLayout.cshtml" />
-    <Content Include="Views\umbNewsItem.cshtml" />
-    <Content Include="Views\umbNewsOverview.cshtml" />
-    <Content Include="Views\umbTextPage.cshtml" />
     <Content Include="Umbraco\assets\fonts\helveticons\helveticons.eot" />
     <Content Include="Umbraco\assets\fonts\helveticons\helveticons.ttf" />
     <Content Include="Umbraco\assets\fonts\helveticons\helveticons.woff" />
