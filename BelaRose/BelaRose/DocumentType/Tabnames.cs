@@ -9,17 +9,15 @@ namespace BelaRose.DocumentType
     {
         Pages = 1,
 
-        Nodes,
-
-        Cookie,
-
         Page,
-
         Content,
-
-
-
-        Introduction,
+        CTA,
+        Services,
+        About,
+        Prices,
+        Gallery,
+        Contact,
+        Info,
 
 
         Settings

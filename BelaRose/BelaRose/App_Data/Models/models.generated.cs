@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6197afc85bda45f")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5c02d01d285c3cd0")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -50,12 +50,300 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// AboutCarousel1: AboutCarousel1.
+		///</summary>
+		[ImplementPropertyType("aboutCarousel1")]
+		public object AboutCarousel1
+		{
+			get { return this.GetPropertyValue("aboutCarousel1"); }
+		}
+
+		///<summary>
+		/// AboutContent: AboutContent.
+		///</summary>
+		[ImplementPropertyType("aboutContent")]
+		public string AboutContent
+		{
+			get { return this.GetPropertyValue<string>("aboutContent"); }
+		}
+
+		///<summary>
+		/// AboutPanels: AboutPanels.
+		///</summary>
+		[ImplementPropertyType("aboutPanels")]
+		public object AboutPanels
+		{
+			get { return this.GetPropertyValue("aboutPanels"); }
+		}
+
+		///<summary>
+		/// AboutSubTitle: AboutSubTitle.
+		///</summary>
+		[ImplementPropertyType("aboutSubTitle")]
+		public string AboutSubTitle
+		{
+			get { return this.GetPropertyValue<string>("aboutSubTitle"); }
+		}
+
+		///<summary>
+		/// AboutTitle: AboutTitle.
+		///</summary>
+		[ImplementPropertyType("aboutTitle")]
+		public string AboutTitle
+		{
+			get { return this.GetPropertyValue<string>("aboutTitle"); }
+		}
+
+		///<summary>
+		/// BackgroundImage: BackgroundImage.
+		///</summary>
+		[ImplementPropertyType("backgroundImage")]
+		public string BackgroundImage
+		{
+			get { return this.GetPropertyValue<string>("backgroundImage"); }
+		}
+
+		///<summary>
+		/// Contact Blurb: Contact Blurb.
+		///</summary>
+		[ImplementPropertyType("contactBlurb")]
+		public string ContactBlurb
+		{
+			get { return this.GetPropertyValue<string>("contactBlurb"); }
+		}
+
+		///<summary>
+		/// CTAButtonText: CTAButtonText.
+		///</summary>
+		[ImplementPropertyType("cTAButtonText")]
+		public string CTabuttonText
+		{
+			get { return this.GetPropertyValue<string>("cTAButtonText"); }
+		}
+
+		///<summary>
+		/// CTAText: CTAText.
+		///</summary>
+		[ImplementPropertyType("cTAText")]
+		public string CTatext
+		{
+			get { return this.GetPropertyValue<string>("cTAText"); }
+		}
+
+		///<summary>
+		/// CTATitle: CTATitle.
+		///</summary>
+		[ImplementPropertyType("cTATitle")]
+		public string CTatitle
+		{
+			get { return this.GetPropertyValue<string>("cTATitle"); }
+		}
+
+		///<summary>
+		/// FaceBook: FaceBook.
+		///</summary>
+		[ImplementPropertyType("faceBook")]
+		public string FaceBook
+		{
+			get { return this.GetPropertyValue<string>("faceBook"); }
+		}
+
+		///<summary>
+		/// GalleryTitle: GalleryTitle.
+		///</summary>
+		[ImplementPropertyType("galleryTitle")]
+		public string GalleryTitle
+		{
+			get { return this.GetPropertyValue<string>("galleryTitle"); }
+		}
+
+		///<summary>
+		/// GooglePlus: GooglePlus.
+		///</summary>
+		[ImplementPropertyType("googlePlus")]
+		public string GooglePlus
+		{
+			get { return this.GetPropertyValue<string>("googlePlus"); }
+		}
+
+		///<summary>
+		/// H1Tag: H1Tag.
+		///</summary>
+		[ImplementPropertyType("h1Tag")]
+		public string H1Tag
+		{
+			get { return this.GetPropertyValue<string>("h1Tag"); }
+		}
+
+		///<summary>
+		/// Images: Images.
+		///</summary>
+		[ImplementPropertyType("images")]
+		public string Images
+		{
+			get { return this.GetPropertyValue<string>("images"); }
+		}
+
+		///<summary>
+		/// Address: Address.
+		///</summary>
+		[ImplementPropertyType("infoAddress")]
+		public string InfoAddress
+		{
+			get { return this.GetPropertyValue<string>("infoAddress"); }
+		}
+
+		///<summary>
+		/// Email: Email.
+		///</summary>
+		[ImplementPropertyType("infoEmail")]
+		public string InfoEmail
+		{
+			get { return this.GetPropertyValue<string>("infoEmail"); }
+		}
+
+		///<summary>
+		/// Phone: Phone.
+		///</summary>
+		[ImplementPropertyType("infoPhone")]
+		public string InfoPhone
+		{
+			get { return this.GetPropertyValue<string>("infoPhone"); }
+		}
+
+		///<summary>
+		/// Instagram: Instagram.
+		///</summary>
+		[ImplementPropertyType("instagram")]
+		public string Instagram
+		{
+			get { return this.GetPropertyValue<string>("instagram"); }
+		}
+
+		///<summary>
+		/// LinkedIn: LinkedIn.
+		///</summary>
+		[ImplementPropertyType("linkedIn")]
+		public string LinkedIn
+		{
+			get { return this.GetPropertyValue<string>("linkedIn"); }
+		}
+
+		///<summary>
+		/// ListTitle: ListTitle.
+		///</summary>
+		[ImplementPropertyType("listTitle")]
+		public string ListTitle
+		{
+			get { return this.GetPropertyValue<string>("listTitle"); }
+		}
+
+		///<summary>
+		/// MetaDescription: MetaDescription.
+		///</summary>
+		[ImplementPropertyType("metaDescription")]
+		public string MetaDescription
+		{
+			get { return this.GetPropertyValue<string>("metaDescription"); }
+		}
+
+		///<summary>
+		/// MetaKeywords: MetaKeywords.
+		///</summary>
+		[ImplementPropertyType("metaKeywords")]
+		public string MetaKeywords
+		{
+			get { return this.GetPropertyValue<string>("metaKeywords"); }
+		}
+
+		///<summary>
+		/// MetaTitle: MetaTitle.
+		///</summary>
+		[ImplementPropertyType("metaTitle")]
+		public string MetaTitle
+		{
+			get { return this.GetPropertyValue<string>("metaTitle"); }
+		}
+
+		///<summary>
+		/// PriceList: PriceList.
+		///</summary>
+		[ImplementPropertyType("priceList")]
+		public object PriceList
+		{
+			get { return this.GetPropertyValue("priceList"); }
+		}
+
+		///<summary>
+		/// PriceList2: PriceList2.
+		///</summary>
+		[ImplementPropertyType("priceList2")]
+		public object PriceList2
+		{
+			get { return this.GetPropertyValue("priceList2"); }
+		}
+
+		///<summary>
+		/// PricesTitle: PricesTitle.
+		///</summary>
+		[ImplementPropertyType("pricesTitle")]
+		public string PricesTitle
+		{
+			get { return this.GetPropertyValue<string>("pricesTitle"); }
+		}
+
+		///<summary>
+		/// ServicePanels: ServicePanels.
+		///</summary>
+		[ImplementPropertyType("servicePanels")]
+		public object ServicePanels
+		{
+			get { return this.GetPropertyValue("servicePanels"); }
+		}
+
+		///<summary>
+		/// ServicesContent: ServicesContent.
+		///</summary>
+		[ImplementPropertyType("servicesContent")]
+		public string ServicesContent
+		{
+			get { return this.GetPropertyValue<string>("servicesContent"); }
+		}
+
+		///<summary>
+		/// ServicesSubTitle: ServicesSubTitle.
+		///</summary>
+		[ImplementPropertyType("servicesSubTitle")]
+		public string ServicesSubTitle
+		{
+			get { return this.GetPropertyValue<string>("servicesSubTitle"); }
+		}
+
+		///<summary>
+		/// ServicesTitle: ServicesTitle.
+		///</summary>
+		[ImplementPropertyType("servicesTitle")]
+		public string ServicesTitle
+		{
+			get { return this.GetPropertyValue<string>("servicesTitle"); }
+		}
+
+		///<summary>
 		/// Slide 1: Slide 1.
 		///</summary>
 		[ImplementPropertyType("slide1")]
 		public string Slide1
 		{
 			get { return this.GetPropertyValue<string>("slide1"); }
+		}
+
+		///<summary>
+		/// Twitter: Twitter.
+		///</summary>
+		[ImplementPropertyType("twitter")]
+		public string Twitter
+		{
+			get { return this.GetPropertyValue<string>("twitter"); }
 		}
 	}
 

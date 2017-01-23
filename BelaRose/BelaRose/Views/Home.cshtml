@@ -3,7 +3,7 @@
     Layout = "~/views/BelaRoseMaster.cshtml";
 }
 <!-- Video Header -->
-<div class="header-video" style="background-image: url('@Umbraco.Media(CurrentPage.BackgroundImage).Url')">
+<div class="header-video" style="background-image: url('@Umbraco.Media(Model.BackgroundImage).Url')">
     <video autoplay muted loop>
         <source src="~/videos/index_video.mp4" type="video/mp4">
         <source src="~/videos/index_video.ogg" type="video/ogg">
@@ -11,23 +11,22 @@
     </video>
     <div class="video-wrapper">
         <!-- Video Title -->
-        <h1 class="video-title">@CurrentPage.H1Tag</h1>
+        <h1 class="video-title">@Model.H1Tag</h1>
     </div>
 </div>
 <!-- /video header ends-->
 
-@if (@CurrentPage.isCTAEnabled)
-{
+
     <!-- Call to Action Section -->
     <section id="call-to-action" class="color-section small-section">
         <div class="container wow fadeInUp">
             <div class="col-lg-7 col-lg-offset-4 col-md-7 col-md-offset-4">
                 <div class="text-center">
-                    <h4>@CurrentPage.CTATitle</h4>
-                    <p>@CurrentPage.CTAText</p>
+                    <h4>@Model.CTATitle</h4>
+                    <p>@Model.CTAText</p>
                     <!-- Button -->
                     <div class="page-scroll">
-                        <a class="btn" href="#contact">@CurrentPage.CTAButtonText</a>
+                        <a class="btn" href="#contact">@Model.CTAButtonText</a>
                     </div>
                 </div>
                 <!-- /text-center -->
@@ -37,23 +36,22 @@
         <!-- /container-->
     </section>
     <!-- Section call-to-action Ends-->
-}
 
 
-@if (@CurrentPage.isServicesEnabled)
-{
+
+
     <!-- Section Services -->
     <section id="services">
         <div class="container">
             <div class="col-md-6 col-lg-6">
                 <!-- Section heading -->
                 <div class="section-heading">
-                    <h2 class="text-left">@CurrentPage.ServicesTitle</h2>
+                    <h2 class="text-left">@Model.ServicesTitle</h2>
                 </div>
                 <!-- main text -->
-                <h3>@CurrentPage.ServicesSubTitle</h3>
+                <h3>@Model.ServicesSubTitle</h3>
                 <p>
-                    @CurrentPage.ServicesContent
+                    @Model.ServicesContent
                 </p>
             </div>
             <!-- /col-md-6-->
@@ -63,7 +61,7 @@
         <ul class="container-fluid accordion-group" id="accordion">
 
             @{
-                var ServiceList = CurrentPage.ServicePanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                var ServiceList = Model.ServicePanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
                 var ServiceCollection = Umbraco.Content(ServiceList);
 
                 foreach (var item in ServiceCollection)
@@ -72,13 +70,11 @@
                 <!-- Accordion item1-->
                     if (item.IsFirst)
                     {
-                        @:
-                        <li class="out">
-                        }
+                        @:<li class="out">
+                    }
                     else
                     {
-                        @:
-                    <li>
+                        @:<li>
                         }
 
                     <div class="accordion-overlay"></div>
@@ -89,8 +85,7 @@
                                 <p>@item.Content</p>
                             </article>
                         </div>
-                        @:
-                    </li>
+                        @:</li>
                 }
 
             }
@@ -98,11 +93,8 @@
         </ul>
         <!-- /Accordion ends -->
     </section>
-                }
+                
 
-
-@if (@CurrentPage.isAboutEnabled)
-{
     <!-- /Section Services ends -->
     <!-- Section About -->
     <section id="about">
@@ -112,11 +104,11 @@
                 <div class="col-lg-7 col-sm-12">
                     <!-- Section heading -->
                     <div class="section-heading">
-                        <h2 class="text-left">@CurrentPage.AboutTitle</h2>
+                        <h2 class="text-left">@Model.AboutTitle</h2>
                     </div>
-                    <h3>@CurrentPage.AboutSubTitle</h3>
+                    <h3>@Model.AboutSubTitle</h3>
                     <p>
-                        @CurrentPage.AboutContent
+                        @Model.AboutContent
                     </p>
                 </div>
                 <!-- Diamond, image though CSS -->
@@ -137,7 +129,7 @@
                     <!-- Image Carousel -->
                     <div id="owl-about" class="owl-carousel">
                         @{
-                            var BlogList = CurrentPage.AboutCarousel1.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                            var BlogList = Model.AboutCarousel1.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
                             var BlogCollection = Umbraco.Content(BlogList);
 
                             foreach (var item in BlogCollection)
@@ -152,7 +144,7 @@
                     <!-- ACCORDION ROW -->
                     <div class="panel-group" id="accordion2">
                         @{
-                            var PanelList = CurrentPage.AboutPanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                            var PanelList = Model.AboutPanels.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
                             var PanelCollection = Umbraco.Content(PanelList);
 
                             foreach (var item in PanelCollection)
@@ -186,96 +178,16 @@
         <!--/container-->
     </section>
     <!--/ Section About ends -->
-                            }
-
-@if (@CurrentPage.isVideoEnabled)
-{
-    <!-- Section Video -->
-    <section id="video-section">
-        <video preload="none" loop autoplay muted>
-            <!-- Video poster Image in the CSS file -->
-            <source src='videos/video.mp4' type='video/mp4' />
-            <source src='videos/video.webm' type='video/webm' />
-        </video>
-        <div class="video-bg">
-            <!-- Overlay color + Text -->
-            <div class="video-overlay">
-                <div class="text-center">
-                    <div class="video-caption">
-                        <h2>Beauty <span>&</span> Elegance</h2>
-                    </div>
-                </div>
-                <!-- /text-center -->
-            </div>
-            <!-- /video-overlay -->
-        </div>
-        <!-- /video-bg -->
-    </section>
-    <!--/ Section Video ends -->
-}
-
-@if (@CurrentPage.isTeamEnabled)
-{
-    <!-- Section Team -->
-    <section id="team" class="gray-section">
-        <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
-                <!-- Section heading -->
-                <div class="section-heading">
-                    <h2>Our Team</h2>
-                </div>
-            </div>
-            <!-- Intro text -->
-            <div class="row team">
-                <div class="col-lg-9 col-centered text-center">
-                    <h3>@CurrentPage.TeamTitle</h3>
-                    <p>
-                        @CurrentPage.TeamContent
-                    </p>
-                </div>
-                <!--/ col-lg-9 -->
-                <!-- Team Carousel-->
-                <div id="owl-team" class="owl-carousel">
 
 
-                    <!-- Team Member 1 -->
-                    <div class="team-item">
-                        <!-- Image -->
-                        <img src="img/team1.png" alt="" class="img-responsive" />
-                        <!-- Caption -->
-                        <div class="team-caption">
-                            <h5>Maria Liveira</h5>
-                            <h6>CEO & Owner</h6>
-                            <!-- Social icons -->
-                            <div class="social-media">
-                                <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                                <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                                <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /team-item -->
 
 
-                </div>
-                <!--/owl-team -->
-            </div>
-            <!--/row team -->
-        </div>
-        <!--/container -->
-    </section>
-    <!-- Section Team ends -->
-}
-
-
-@if (@CurrentPage.isPricesEnabled)
-{
     <!-- Section Prices -->
     <section id="prices">
         <div class="container">
             <!-- Section Heading -->
             <div class="section-heading">
-                <h2>@CurrentPage.PricesTitle</h2>
+                <h2>@Model.PricesTitle</h2>
             </div>
 
             <!-- Price tabs Start -->
@@ -288,7 +200,7 @@
                             <div class="col-md-12">
                                 <!-- image -->
                                 <img class="img-responsive" src="img/price2.jpg" alt="">
-                                <h3>@CurrentPage.ListTitle</h3>
+                                <h3>@Model.ListTitle</h3>
                             </div>
                             <div class="col-md-6">
                                 <!-- menu body -->
@@ -298,7 +210,7 @@
 
 
                                         @{
-                                            var PriceList = CurrentPage.PriceList.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                            var PriceList = Model.PriceList.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
                                             var PriceCollection = Umbraco.Content(PriceList);
 
                                             foreach (var item in PriceCollection)
@@ -333,7 +245,7 @@
                                 <div class="menu-body">
                                     <div class="menu-section">
                                         @{
-                                            var PriceList2 = CurrentPage.PriceList2.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                                            var PriceList2 = Model.PriceList2.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
                                             var PriceCollection2 = Umbraco.Content(PriceList2);
 
                                             foreach (var item in PriceCollection2)
@@ -374,16 +286,15 @@
         <!-- /container -->
     </section>
     <!-- /Section Prices ends -->
-                                            }
+                                            
 
-@if (@CurrentPage.isGalleryEnabled)
-{
+
     <!-- Section Gallery -->
     <section id="gallery" class="gray-section">
         <div class="container-fluid">
             <!-- Section heading -->
             <div class="section-heading">
-                <h2>@CurrentPage.GalleryTitle</h2>
+                <h2>@Model.GalleryTitle</h2>
             </div>
 
             <!-- Gallery -->
@@ -392,7 +303,7 @@
                     <div id="lightbox">
 
                         @{
-                            var ImageList = CurrentPage.Images.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                            var ImageList = Model.Images.ToString().Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
                             var ImageCollection = Umbraco.Content(ImageList);
 
                             foreach (var item in ImageCollection)
@@ -419,63 +330,60 @@
         <!-- /container -->
     </section>
     <!-- Section Gallery ends -->
-                            }
 
-<!
 
-@if (@CurrentPage.isContactEnabled)
-{
-    <!-- Section Contact -->
-    <section id="contact">
-        <div class="container">
-            <!-- Section heading -->
-            <div class="section-heading">
-                <h2>Contact us</h2>
-            </div>
-            <!-- Contact -->
-            <div class="col-lg-9 col-centered text-center">
-                <h3>Make an Appointment</h3>
-                <p>Lorem av ipsum dolor sit amet, dorem ipsuem ore consectetur adipisicing elit orem isuem amorem semprem Ratione, voluptatem lorem ipsuet alpacas dolorem animi nisi autem lorem ispuet mangus ungem.</p>
+
+
+<!-- Section Contact -->
+<section id="contact">
+    <div class="container">
+        <!-- Section heading -->
+        <div class="section-heading">
+            <h2>Contact us</h2>
+        </div>
+        <!-- Contact -->
+        <div class="col-lg-9 col-centered text-center">
+            <h3>Make an Appointment</h3>
+            <p>@Model.ContactBlurb</p>
+            <!-- Form Starts -->
+            <div id="contact_form">
+                <!-- form results -->
+                <div id="contact_results"></div>
                 <!-- Form Starts -->
-                <div id="contact_form">
-                    <!-- form results -->
-                    <div id="contact_results"></div>
-                    <!-- Form Starts -->
-                    <div class="form-group">
-                        <div class="col-lg-6">
-                            <input type="text" name="name" class="col-lg-6 form-control input-field" placeholder="Name" required="">
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="email" name="email" class="form-control input-field" placeholder="Email ID" required="">
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="text" name="service" class="form-control input-field" placeholder="Service" required="">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="input-group date" id="datetimepicker1">
-                                <input type="text" name="date" class="form-control input-field" placeholder="Date and Time" required="" />
-                                <span class="input-group-addon">
-                                    <span class="fa fa-calendar"></span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <textarea name="message" id="message" class="textarea-field form-control" rows="4" placeholder="Enter your message" required=""></textarea>
-                            <button type="submit" id="submit_btn" value="Submit" class="btn center-block">Send message</button>
+                <div class="form-group">
+                    <div class="col-lg-6">
+                        <input type="text" name="name" class="col-lg-6 form-control input-field" placeholder="Name" required="">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="email" name="email" class="form-control input-field" placeholder="Email ID" required="">
+                    </div>
+                    <div class="col-lg-6">
+                        <input type="text" name="service" class="form-control input-field" placeholder="Service" required="">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group date" id="datetimepicker1">
+                            <input type="text" name="date" class="form-control input-field" placeholder="Date and Time" required="" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar"></span>
+                            </span>
                         </div>
                     </div>
-                    <!-- /Form group-->
+                    <div class="col-lg-12">
+                        <textarea name="message" id="message" class="textarea-field form-control" rows="4" placeholder="Enter your message" required=""></textarea>
+                        <button type="submit" id="submit_btn" value="Submit" class="btn center-block">Send message</button>
+                    </div>
                 </div>
-                <!--/Contact form -->
+                <!-- /Form group-->
             </div>
-            <!--/col-lg-9 -->
+            <!--/Contact form -->
         </div>
-        <!-- /container-->
-    </section>
-    <!--Section Contact ends -->
-}
-@if (@CurrentPage.isInfoEnabled)
-{
+        <!--/col-lg-9 -->
+    </div>
+    <!-- /container-->
+</section>
+<!--Section Contact ends -->
+
+
     <!--Section Info -->
     <section id="info" class="small-section">
         <div class="container">
@@ -484,16 +392,17 @@
                     <h5>Information</h5>
                     <!-- contact info -->
                     <div class="contact-info">
-                        <p><i class="fa fa-envelope"></i><a href="mailto:youremailaddress">beauty@site.com</a></p>
-                        <p><i class="fa fa-phone margin-icon"></i>Call Us (+100) 456 7890</p>
+                        <p><i class="fa fa-envelope"></i><a href="@Model.InfoEmail">@Model.InfoEmail</a></p>
+                        <p><i class="fa fa-phone margin-icon"></i>Call Us @Model.InfoPhone</p>
                     </div>
                     <!-- address info -->
-                    <p>We are located at Imaginary Beauty City, 304.</p>
+                    <p>We are located at @Model.InfoAddress.</p>
                     <!-- Map -->
                     <div id="map-canvas"></div>
                     <!-- Newsletter -->
                     <h5>our Newsletter</h5>
                     <p>We will send updates once a week.</p>
+
                     <!-- Newsletter Form -->
                     <div id="mc_embed_signup">
                         <!-- Your form adress in the line bellow -->
@@ -527,4 +436,3 @@
         <!--/container -->
     </section>
     <!-- /Section Info ends -->
-}
