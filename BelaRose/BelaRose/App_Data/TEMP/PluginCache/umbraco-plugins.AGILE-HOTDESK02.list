@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <plugins>
   <baseType type="umbraco.interfaces.IApplicationStartupHandler" resolutionType="FindAllTypes">
+    <add type="Vega.USiteBuilder.SiteBuilderApplicationBase, Vega.USiteBuilder, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.Models.Identity.IdentityModelMappings, Umbraco.Core, Version=1.0.6185.24083, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.Strategies.RelateOnCopyHandler, Umbraco.Core, Version=1.0.6185.24083, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.Strategies.RelateOnTrashHandler, Umbraco.Core, Version=1.0.6185.24083, Culture=neutral, PublicKeyToken=null" />
@@ -165,6 +166,29 @@
     <add type="Umbraco.Core.Persistence.Mappers.UserMapper, Umbraco.Core, Version=1.0.6185.24083, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.Persistence.Mappers.UserTypeMapper, Umbraco.Core, Version=1.0.6185.24083, Culture=neutral, PublicKeyToken=null" />
   </baseType>
+  <baseType type="umbraco.interfaces.ICacheRefresher" resolutionType="FindAllTypes">
+    <add type="Umbraco.Web.Cache.RelationTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.ApplicationCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.ApplicationTreeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.ContentTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.DataTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.DictionaryCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.DomainCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.LanguageCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.MacroCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.MediaCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.MemberCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.MemberGroupCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.PageCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.PublicAccessCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.StylesheetCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.StylesheetPropertyCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.TemplateCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.UnpublishedPageCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.UserCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.UserPermissionsCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Web.Cache.UserTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
+  </baseType>
   <baseType type="Umbraco.Core.PropertyEditors.IParameterEditor" resolutionType="FindAllTypes">
     <add type="Umbraco.Core.PropertyEditors.ParameterEditor, Umbraco.Core, Version=1.0.6185.24083, Culture=neutral, PublicKeyToken=null" />
     <add type="Umbraco.Core.PropertyEditors.PropertyEditor, Umbraco.Core, Version=1.0.6185.24083, Culture=neutral, PublicKeyToken=null" />
@@ -284,47 +308,5 @@
     <add type="umbraco.businesslogic.UsersApplicationDefinition, businesslogic, Version=1.0.6185.24085, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.businesslogic.MembersApplicationDefinition, businesslogic, Version=1.0.6185.24085, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.businesslogic.TranslationApplicationDefinition, businesslogic, Version=1.0.6185.24085, Culture=neutral, PublicKeyToken=null" />
-  </baseType>
-  <baseType type="umbraco.interfaces.ICacheRefresher" resolutionType="FindAllTypes">
-    <add type="Umbraco.Web.Cache.RelationTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.ApplicationCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.ApplicationTreeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.ContentTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.DataTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.DictionaryCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.DomainCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.LanguageCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.MacroCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.MediaCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.MemberCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.MemberGroupCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.PageCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.PublicAccessCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.StylesheetCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.StylesheetPropertyCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.TemplateCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.UnpublishedPageCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.UserCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.UserPermissionsCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.Cache.UserTypeCacheRefresher, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-  </baseType>
-  <baseType type="Umbraco.Web.Editors.IEditorValidator" resolutionType="FindAllTypes">
-    <add type="Umbraco.ModelsBuilder.Validation.ContentTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.5.96, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.ModelsBuilder.Validation.MediaTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.5.96, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.ModelsBuilder.Validation.MemberTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.5.96, Culture=neutral, PublicKeyToken=null" />
-  </baseType>
-  <baseType type="Umbraco.Web.HealthCheck.HealthCheck" resolutionType="FindAllTypes">
-    <add type="Umbraco.Web.HealthCheck.Checks.Config.MacroErrorsCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Config.NotificationEmailCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Config.TrySkipIisCustomErrorsCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Config.CustomErrorsCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Config.TraceCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Config.CompilationDebugCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Services.SmtpCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Permissions.FolderAndFilePermissionsCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Security.ExcessiveHeadersCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Security.ClickJackingCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.Security.HttpsCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck, umbraco, Version=1.0.6185.24089, Culture=neutral, PublicKeyToken=null" />
   </baseType>
 </plugins>
