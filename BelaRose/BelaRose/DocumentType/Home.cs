@@ -110,7 +110,8 @@ namespace BelaRose.DocumentType
         public string ListTitle { get; set; }
         [DocumentTypeProperty(UmbracoPropertyType.ContentPicker, Name = "PriceList", Description = "PriceList.", Tab = TabNames.Prices)]
         public string PriceList { get; set; }
-        [DocumentTypeProperty(UmbracoPropertyType.ContentPicker, Name = "PriceList2", Description = "PriceList2.", Tab = TabNames.Prices)]
+
+        [DocumentTypeProperty(UmbracoPropertyType.ContentPicker,  Name = "PriceList2", Description = "PriceList2.", Tab = TabNames.Prices)]
         public string PriceList2 { get; set; }
 
 
@@ -119,7 +120,7 @@ namespace BelaRose.DocumentType
 
 
         [DocumentTypeProperty(UmbracoPropertyType.MediaPicker, Name = "Images", Description = "Images.", Tab = TabNames.Gallery)]
-        public List<int?> Images { get; set; }
+        public string Images { get; set; }
 
 
         [DocumentTypeProperty(UmbracoPropertyType.Textstring, Name = "Contact Blurb", Description = "Contact Blurb.", Tab = TabNames.Contact)]

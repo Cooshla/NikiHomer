@@ -375,6 +375,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DocumentType\Constants.cs" />
+    <Compile Include="DocumentType\ContentBlock.cs" />
     <Compile Include="DocumentType\HoldingPage.cs" />
     <Compile Include="DocumentType\Home.cs" />
     <Compile Include="DocumentType\Tabnames.cs" />
